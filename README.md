@@ -1,6 +1,6 @@
 # Text2Tex: Text-driven Texture Synthesis via Diffusion Models
 
-<p align="center"><img src="docs/static/teaser/teaser.jpg" width="600px"/></p>
+<p align="center"><img src="docs/static/teaser/teaser.jpg" width="100%"/></p>
 
 ## Introduction
 
