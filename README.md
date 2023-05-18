@@ -8,7 +8,7 @@ We present Text2Tex, a novel method for generating high-quality textures for 3D 
 
 Please also check out the project website [here](https://daveredrum.github.io/Text2Tex/).
 
-For additional detail, please see the ScanRefer paper:  
+For additional detail, please see the Text2Tex paper:  
 "[Text2Tex: Text-driven Texture Synthesis via Diffusion Models]()"  
 by [Dave Zhenyu Chen](https://www.niessnerlab.org/members/zhenyu_chen/profile.html), [Yawar Siddiqui](https://niessnerlab.org/members/yawar_siddiqui/profile.html),
 [Hsin-Ying Lee](https://research.snap.com/team/team-member.html#hsin-ying-lee),
