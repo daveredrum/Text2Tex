@@ -1,0 +1,14 @@
+trimesh
+scikit-learn
+opencv-python
+matplotlib
+imageio
+diffusers
+einops
+transformers
+open-clip-torch
+gradio
+pytorch-lightning==1.9.1
+omegaconf
+triton
+accelerate
