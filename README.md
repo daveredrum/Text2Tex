@@ -61,7 +61,7 @@ To use the ControlNet Depth2img model, please download `control_sd15_depth.pth` 
 To make sure everything is set up and configured correctly, you can run the following script to generate texture for a backpack.
 
 ```shell
-./bach/run.sh
+./bash/run.sh
 ```
 
 The generation and refinement should take around 500 sec and 360 sec, respectively. Once the synthesis completes, you should be able to see all generated assets under `outputs/backpack/42-p36-h20-1.0-0.3-0.1`. Load the final mesh `outputs/backpack/42-p36-h20-1.0-0.3-0.1/update/mesh/19.obj` in MeshLab, you should be able to see this (so something similar):
