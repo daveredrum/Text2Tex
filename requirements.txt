@@ -12,3 +12,6 @@ pytorch-lightning==1.9.1
 omegaconf
 triton
 accelerate
+objaverse
+mathutils
+iopath==0.1.10

@@ -79,6 +79,10 @@ For the best quality of texture synthesis, there are some necessary pre-processi
 
 We provide `scripts/normalize_mesh.py` and `scripts/rotate_mesh.py` to make the mesh preprocessing easy for you.
 
+If you already have a normalized mesh but haven't parameterized it yet, please use `scripts/parameterize_mesh.py` to generate the UV map.
+
+> NOTE: we expect the mesh to be triangulated.
+
 A mesh ready for next steps should look like this:
 
 <p align="center"><img src="docs/static/img/preprocessed.jpg" width="50%"/></p>
@@ -111,6 +115,16 @@ python scripts/generate_texture.py \
 ```
 
 If you want some high-res textures, you can set `--device` to `a6000` for 3k resolution. To play around other parameters, please check `scripts/generate_texture.py`, or simply run `python scripts/generate_texture.py -h`.
+
+## Benchmark on Objaverse subset
+
+To generate textures for the Objaverse objects we used in the paper, please run the following script to download and pre-process those meshes:
+
+```shell
+python scripts/download_objaverse_subset.py
+```
+
+All pre-processed meshes will be downloaded to `data/objaverse/`.
 
 ## Citation
 
