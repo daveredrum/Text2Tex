@@ -79,7 +79,7 @@ For the best quality of texture synthesis, there are some necessary pre-processi
 
 We provide `scripts/normalize_mesh.py` and `scripts/rotate_mesh.py` to make the mesh preprocessing easy for you.
 
-If you already have a normalized mesh but haven't parameterized it yet, please use `scripts/parameterize_mesh.py` to generate the UV map.
+~~If you already have a normalized mesh but haven't parameterized it yet, please use `scripts/parameterize_mesh.py` to generate the UV map.~~ Now, you don't have to parameterize your mesh by yourself thanks to [xatlas](https://github.com/jpcy/xatlas).
 
 > NOTE: we expect the mesh to be triangulated.
 

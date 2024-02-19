@@ -1,6 +1,7 @@
 import os
 import torch
 import trimesh
+import xatlas
 
 import numpy as np
 
@@ -27,14 +28,26 @@ def compute_principle_directions(model_path, num_points=20000):
     return principle_directions
 
 
-def init_mesh(model_path, device):
+def init_mesh(input_path, cache_path, device):
+    print("=> parameterizing target mesh...")
+
+    mesh = trimesh.load_mesh(input_path, force='mesh')
+    try:
+        vertices, faces = mesh.vertices, mesh.faces
+    except AttributeError:
+        print("multiple materials in {} are not supported".format(input_path))
+        exit()
+
+    vmapping, indices, uvs = xatlas.parametrize(vertices, faces)
+    xatlas.export(str(cache_path), vertices[vmapping], indices, uvs)
+
     print("=> loading target mesh...")
 
-    # principle_directions = compute_principle_directions(model_path)
+    # principle_directions = compute_principle_directions(cache_path)
     principle_directions = None
     
-    _, faces, aux = load_obj(model_path, device=device)
-    mesh = load_objs_as_meshes([model_path], device=device)
+    _, faces, aux = load_obj(cache_path, device=device)
+    mesh = load_objs_as_meshes([cache_path], device=device)
 
     num_verts = mesh.verts_packed().shape[0]
 

@@ -184,7 +184,11 @@ if __name__ == "__main__":
 
     # init resources
     # init mesh
-    mesh, _, faces, aux, principle_directions, mesh_center, mesh_scale = init_mesh(os.path.join(args.input_dir, args.obj_file), DEVICE)
+    mesh, _, faces, aux, principle_directions, mesh_center, mesh_scale = init_mesh(
+        os.path.join(args.input_dir, args.obj_file),
+        os.path.join(output_dir, args.obj_file), 
+        DEVICE
+    )
 
     # gradient texture
     init_texture = Image.open("./samples/textures/dummy.png").convert("RGB").resize((args.uv_size, args.uv_size))
